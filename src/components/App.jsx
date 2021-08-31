@@ -4,6 +4,8 @@ import statisticalData from 'data/statistical-data.json';
 import Statistics from 'components/Statistics/Statistics';
 import friends from 'data/friends.json';
 import FriendList from 'components/FriendList/FriendList';
+import transactions from 'data/transactions.json';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 export default function App() {
   return (
@@ -16,7 +18,8 @@ export default function App() {
         stats={user.stats}
       />
       <Statistics stats={statisticalData} />
-      <FriendList friends={friends}/>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </div>
   );
 }
